@@ -6,6 +6,7 @@ import { GameType } from "./constants/gametype";
 import background from '../../public/next.svg'
 import CDropdown from "./components/dropdown";
 import Scenario from "./scenario";
+import Legal from "./legal";
 
 export default function Home(this: any) {
 
@@ -34,6 +35,9 @@ export default function Home(this: any) {
         </select>
       </div>
         <Scenario></Scenario>
+        <div className="py-10">
+          <Legal></Legal>
+        </div>
     </div>
   )
 }
