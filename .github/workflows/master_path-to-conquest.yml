@@ -23,13 +23,13 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd roll-for-conquest
+          cd roll_for_conquest
           npm install
           npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: zip release.zip ./roll_for_conquest/build/* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
