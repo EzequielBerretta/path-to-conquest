@@ -1,4 +1,4 @@
-export default function(){
+export default function Legal(){
 
     return(
         <div className="absolute bottom-0">
