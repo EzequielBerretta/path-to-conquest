@@ -1,13 +1,21 @@
 "use client";
 
-import { useState } from "react"
-import scenarios from "./constants/Scenarios/TLAOK_TOURNAMENT_SCENARIO_PACK_2023.json"
+import { useState } from "react";
+import tlaokScenarios from "./constants/scenarios/TLAOK_TOURNAMENT_SCENARIO_PACK_2023.json";
+import fbScenarios from "./constants/scenarios/First-Blood-Scenario-Pack.json"
 import { PrefetchKind } from "next/dist/client/components/router-reducer/router-reducer-types";
+import { GameType } from "./constants/gametype";
 
-export default function Scenario() {
+interface ScenarioProps {
+    gametype: GameType;
+  }
+
+
+export default function Scenario({ gametype }:ScenarioProps) {
     const [rolledNumber, setRolledNumber] = useState(0);
-
-    const imageSource = `/scenarios/scenario${rolledNumber}.png`
+    const scenarios = (gametype == GameType.firstblood)? fbScenarios : tlaokScenarios;
+    const pathGameMode = (gametype == GameType.firstblood)? "firstblood" : "tlaok";
+    const imageSource = `/Scenarios/${pathGameMode}/scenario${rolledNumber}.png`;
 
 
     function onClick() {
