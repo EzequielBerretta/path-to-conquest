@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/a39d665d-7766-41ab-921e-a5ae1fbff208/resourceGroups/conquest/providers/Microsoft.Web/sites/path-to-conquest",
+    "appService.deploySubpath": "roll_for_conquest"
+}
